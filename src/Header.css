@@ -1,0 +1,16 @@
+a{
+  color:#fff;
+  text-decoration: none;
+  margin-left: 3rem;
+}
+
+a:hover{
+  color:darkgrey;
+}
+
+
+.logButton{
+  position: absolute;
+  left: 92%;
+  transform: translateX(-15%);
+}
