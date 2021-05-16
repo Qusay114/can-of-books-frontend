@@ -18,7 +18,6 @@ class Header extends React.Component {
           <LoginButton />
           <LogoutButton />
         </div>
-        {/* done */}
       </Navbar>
     );
   }
