@@ -1,9 +1,29 @@
 .jumbotron{
-  margin-bottom: 0;
+  width: 35rem;
 }
 
-.list-group.list-group-flush {
+/* .list-group.list-group-flush {
   margin-top: 12rem;
   width: 30rem;
+} */
+
+.col{
+    margin-top: 3rem;
+    margin-left: 27rem;
+}
+
+
+
+.carousel.slide {
+  width: 30rem;
+}
+
+.form-group {
+  width: 24rem;
+  margin-left: 10rem;
+}
+
+input.form-control {
+  margin-bottom: 1rem;
 }
 
