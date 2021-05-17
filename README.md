@@ -22,3 +22,24 @@
 
 ## Credit and Collaborations
 Laith Al-Odat
+
+
+# Collaboration :
+
+### Team agreement : 
+
+1. What hours will you be available to communicate? 
+from 1pm to 5pm  , and at 8pm 
+
+2. What platform will you use to communicate (ie. Slack, phone …)? 
+Slack
+
+3. How often will you take breaks?
+each hour two short breaks .
+
+4. What is your plan if you start to fall behind? 
+try to take a break , and reconsiders the problem .
+
+
+### Time estimation :
+Each feature took almost 15 minutes .

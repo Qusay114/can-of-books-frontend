@@ -1,6 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//bootstrap components
 import Card from 'react-bootstrap/Card';
+
 import './Login.css';
 import LoginButton from './LoginButton';
 
