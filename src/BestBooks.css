@@ -9,7 +9,7 @@
 
 .col{
     margin-top: 3rem;
-    margin-left: 27rem;
+    margin-left: 2rem;
 }
 
 
@@ -25,5 +25,13 @@
 
 input.form-control {
   margin-bottom: 1rem;
+}
+
+
+.card {
+  margin: auto;
+  text-align: center;
+  width: 13rem;
+  margin-bottom: 5rem;
 }
 
