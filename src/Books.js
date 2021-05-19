@@ -22,6 +22,7 @@ class Books extends React.Component{
                 </Card.Body>
                 <Card.Footer>
                   <Button onClick={() => this.props.deleteBook(index)}>Delete</Button>
+                  <Button onClick={() => this.props.handleShowUpdateForm(index)} style={{marginLeft:'3rem'}}>Update</Button>
                 </Card.Footer>
               </Card>
       )

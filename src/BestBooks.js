@@ -11,6 +11,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 //created components
 import Books from './Books';
 import BookFormModal from './BookFormModal';
+import UpdateBookForm from './UpdateBookForm';
 
 class MyFavoriteBooks extends React.Component {
 
@@ -19,6 +20,9 @@ class MyFavoriteBooks extends React.Component {
     this.state = {
       books:[],
       show:false,
+      showUpdateForm:false ,
+      selectedBook:{},
+      selectedIndex:-1,
     }
   }
 
@@ -54,6 +58,34 @@ class MyFavoriteBooks extends React.Component {
   handleClose = () => this.setState({show:false});
   handleShow = () => this.setState({show:true});
 
+  handleCloseUpdateForm = () => this.setState({showUpdateForm:false});
+  handleShowUpdateForm = async (index) => {
+    const selectedBook = this.state.books.filter((book , idx) => idx===index );
+    await this.setState({
+      selectedBook:selectedBook[0],
+      showUpdateForm:true,
+      selectedIndex:index,
+    })
+
+
+  };
+
+  updateBook = async (event) => {
+    event.preventDefault();
+    const index = this.state.selectedIndex ;
+    const bookName = event.target.bookName.value ;
+    const bookDescription = event.target.bookDescription.value ;
+    const reqBody = {
+      bookName:bookName,
+      bookDescription:bookDescription,
+      email:this.props.auth0.user.email,
+    }
+    const updatedBooks = await axios.put(`http://localhost:3002/books/${index}` , reqBody);
+    console.log('updated books' ,updatedBooks);
+    await this.setState({books:updatedBooks.data});
+
+  }  
+  
   render() {
     const { isAuthenticated } = this.props.auth0; 
     console.log(this.props.auth0);
@@ -64,8 +96,17 @@ class MyFavoriteBooks extends React.Component {
           { this.state.books.length > 0 &&
           <>
         
-          <Books books={this.state.books} deleteBook={this.deleteBook} />
+          <Books books={this.state.books} deleteBook={this.deleteBook} 
+            handleShowUpdateForm={this.handleShowUpdateForm}
+          />
           </>
+          }
+          { this.state.showUpdateForm &&
+          <UpdateBookForm showUpdateForm={this.state.showUpdateForm}
+            handleCloseUpdateForm={this.handleCloseUpdateForm}
+            selectedBook={this.state.selectedBook}
+            updateBook={this.updateBook}
+            /> 
           }
       </Col>
     }
