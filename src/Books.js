@@ -3,6 +3,8 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
+//css files
+import './books.css';
 
 class Books extends React.Component{
   render(){

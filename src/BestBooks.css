@@ -19,7 +19,7 @@
 }
 
 .form-group {
-  width: 24rem;
+  width: 10rem;
   margin-left: 10rem;
 }
 
@@ -33,5 +33,6 @@ input.form-control {
   text-align: center;
   width: 13rem;
   margin-bottom: 5rem;
+  margin-left:1rem;
 }
 

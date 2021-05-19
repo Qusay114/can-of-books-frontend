@@ -60,7 +60,7 @@ class MyFavoriteBooks extends React.Component {
     return(
       <Row>
       { isAuthenticated && 
-      <Col>
+      <Col style={{width:'80%'}}>
           { this.state.books.length > 0 &&
           <>
         
@@ -69,7 +69,7 @@ class MyFavoriteBooks extends React.Component {
           }
       </Col>
     }
-    <Col>
+    <Col style={{width:'20%'}}>
       <BookFormModal addBook={this.addBook} show={this.state.show} 
       handleClose={this.handleClose} handleShow={this.handleShow}  />
     </Col>
