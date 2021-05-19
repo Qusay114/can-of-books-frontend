@@ -14,12 +14,12 @@ class BookFormModal extends React.Component{
     return(
       <>
       <Modal show={this.props.show} onHide={this.props.handleClose} size='lg'>
-      <Modal.Header closeButton>
+      <Modal.Header >
         <Modal.Title>Add New book</Modal.Title>
       </Modal.Header>
       <Modal.Body> 
       <Form onSubmit={this.props.addBook}>
-        <Form.Group>
+        <Form.Group style={{width:'20rem'}}>
           <Form.Control type='text' placeholder='your favourite book' name='bookName' />
           <Form.Control type='text' placeholder='a brief description about the book' name='description' />      
           <Button type='submit'>Add</Button>
@@ -30,9 +30,9 @@ class BookFormModal extends React.Component{
         <Button variant="secondary" onClick={this.props.handleClose}>
           Close
         </Button>
-        <Button variant="primary" onClick={this.props.handleClose}>
+        {/* <Button variant="primary" onClick={this.props.handleClose}>
           Save Changes
-        </Button>
+        </Button> */}
       </Modal.Footer>
     </Modal>
     <Button variant="primary" onClick={this.props.handleShow}>
